@@ -19,7 +19,6 @@ app.get("/", (req, res) => {
       const data = response.data;
       const totalPages = Math.ceil(data.items.length / perPage);
       if (page === undefined) {
-        console.log(page);
         page = 1;
       } else if (isNaN(page) || page < 1 || page > totalPages) {
         res.status(404).send("Page not found");
@@ -36,7 +35,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`masuk sini`);
   console.log(`Example app listening on port ${port}`);
 });
 
