@@ -30,12 +30,14 @@ app.get("/", (req, res) => {
       res.render("image", { items, page, totalPages });
     })
     .catch((error) => {
+      console.log(error);
       res.status(500).send("Error load photos");
     });
 });
 
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`);
-// });
+app.listen(port, () => {
+  console.log(`masuk sini`);
+  console.log(`Example app listening on port ${port}`);
+});
 
-module.exports = app;
+// module.exports = app;
